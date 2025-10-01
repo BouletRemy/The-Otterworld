@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Jeu Vidéo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Créateur de Jeu Vidéo - Base</header>
+
+<nav>
+  <ul>
+    <li onclick="showSection('factions')">Factions</li>
+    <li onclick="showSection('univers')">Univers / Monde</li>
+    <li onclick="showSection('personnages')">Personnages</li>
+    <li onclick="showSection('gameplay')">Gameplay / Mécaniques</li>
+    <li onclick="showSection('histoire')">Histoire / Lore</li>
+    <li onclick="showSection('ressources')">Ressources / Économie</li>
+    <li onclick="showSection('objectifs')">Objectifs / Missions</li>
+    <li onclick="showSection('technologie')">Technologie / Évolution</li>
+  </ul>
+</nav>
+
+<main>
+  <section id="factions">
+    <h2>Factions</h2>
+    <label>Nom de la faction :</label>
+    <input type="text" placeholder="Ex : Les Loutres de Nonna">
+    <label>Description :</label>
+    <textarea rows="4" placeholder="Décrire la faction, ses croyances, sa culture, son rôle..."></textarea>
+    <label>Relations avec d'autres factions :</label>
+    <textarea rows="3" placeholder="Alliances, ennemis, neutres..."></textarea>
+  </section>
+
+  <section id="univers">
+    <h2>Univers / Monde</h2>
+    <label>Nom du monde :</label>
+    <input type="text" placeholder="Nom du monde">
+    <label>Description générale :</label>
+    <textarea rows="4" placeholder="Climat, paysage, histoire, mutations..."></textarea>
+    <label>Événements marquants :</label>
+    <textarea rows="3" placeholder="Catastrophes, guerres, renaissances..."></textarea>
+  </section>
+
+  <section id="personnages">
+    <h2>Personnages</h2>
+    <label>Nom du personnage principal :</label>
+    <input type="text" placeholder="Ex : Nonna">
+    <label>Description :</label>
+    <textarea rows="4" placeholder="Personnalité, compétences, motivations..."></textarea>
+    <label>Autres personnages clés :</label>
+    <textarea rows="4" placeholder="Alliés, ennemis, mentors, etc."></textarea>
+  </section>
+
+  <section id="gameplay">
+    <h2>Gameplay / Mécaniques</h2>
+    <label>Type de gameplay :</label>
+    <input type="text" placeholder="Ex : Gestion, Combat, Exploration">
+    <label>Mécaniques principales :</label>
+    <textarea rows="4" placeholder="Construction, combat, diplomatie, récolte..."></textarea>
+    <label>Phases de jeu :</label>
+    <textarea rows="3" placeholder="Ex : Exploration -> Combat -> Gestion de ressources"></textarea>
+  </section>
+
+  <section id="histoire">
+    <h2>Histoire / Lore</h2>
+    <label>Résumé :</label>
+    <textarea rows="4" placeholder="Résumé global du scénario"></textarea>
+    <label>Événements clés :</label>
+    <textarea rows="4" placeholder="Chapitre 1, chapitre 2, climax..."></textarea>
+    <label>Objectifs narratifs :</label>
+    <textarea rows="3" placeholder="Que doit accomplir le joueur dans l'histoire ?"></textarea>
+  </section>
+
+  <section id="ressources">
+    <h2>Ressources / Économie</h2>
+    <label>Types de ressources :</label>
+    <textarea rows="3" placeholder="Nourriture, énergie, matériaux, etc."></textarea>
+    <label>Échanges et commerce :</label>
+    <textarea rows="3" placeholder="Comment les factions échangent ou se battent pour les ressources"></textarea>
+    <label>Gestion :</label>
+    <textarea rows="3" placeholder="Production, consommation, stockage..."></textarea>
+  </section>
+
+  <section id="objectifs">
+    <h2>Objectifs / Missions</h2>
+    <label>Missions principales :</label>
+    <textarea rows="4" placeholder="Liste des missions principales du jeu"></textarea>
+    <label>Missions secondaires :</label>
+    <textarea rows="3" placeholder="Quêtes annexes, challenges, exploration..."></textarea>
+    <label>Système de progression :</label>
+    <textarea rows="3" placeholder="Comment le joueur progresse, niveaux, compétences..."></textarea>
+  </section>
+
+  <section id="technologie">
+    <h2>Technologie / Évolution</h2>
+    <label>Niveaux technologiques :</label>
+    <textarea rows="3" placeholder="De primitif à avancé, inventions, outils..."></textarea>
+    <label>Impact sur le gameplay :</label>
+    <textarea rows="3" placeholder="Comment les technologies changent le jeu"></textarea>
+    <label>Évolution des factions :</label>
+    <textarea rows="3" placeholder="Comment chaque faction évolue grâce à la technologie"></textarea>
+  </section>
+</main>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
