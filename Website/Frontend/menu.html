@@ -93,13 +93,13 @@ function showSection(id) {
 
   let noms = [];
   let dossier = "";
-  if (id === 'factions') { noms = categories.Faction; dossier = "factions"; }
-  if (id === 'univers') { noms = categories.Univers; dossier = "univers"; }
-  if (id === 'gameplay') { noms = categories.Gameplay; dossier = "gameplay"; }
-  if (id === 'histoire') { noms = categories.Histoire; dossier = "histoire"; }
-  if (id === 'objectifs') { noms = categories.Objectif; dossier = "objectifs"; }
-  if (id === 'ressources') { noms = categories.Ressource; dossier = "ressources"; }
-  if (id === 'technologie') { noms = categories.Technologie; dossier = "technologie"; }
+  if (id === 'factions') { noms = categories.Faction; dossier = "Factions"; }
+  if (id === 'univers') { noms = categories.Univers; dossier = "Univers"; }
+  if (id === 'gameplay') { noms = categories.Gameplay; dossier = "Gameplay"; }
+  if (id === 'histoire') { noms = categories.Histoire; dossier = "Histoire"; }
+  if (id === 'objectifs') { noms = categories.Objectif; dossier = "Objectifs"; }
+  if (id === 'ressources') { noms = categories.Ressource; dossier = "Ressources"; }
+  if (id === 'technologie') { noms = categories.Technologie; dossier = "Technologie"; }
 
   noms.forEach(name => {
     const li = document.createElement('li');
