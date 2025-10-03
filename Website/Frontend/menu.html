@@ -1,63 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base de Jeu Vidéo</title>
-  <link rel="stylesheet" href="../Frontend/style.css">
-</head>
-<body>
-
-<header>Créateur de Jeu Vidéo - Base</header>
-
-<nav>
-  <ul>
-    <li onclick="showSection('factions')">Factions</li>
-    <li onclick="showSection('univers')">Univers / Monde</li>
-    <li onclick="showSection('personnages')">Personnages</li>
-    <li onclick="showSection('gameplay')">Gameplay / Mécaniques</li>
-    <li onclick="showSection('histoire')">Histoire / Lore</li>
-    <li onclick="showSection('ressources')">Ressources / Économie</li>
-    <li onclick="showSection('objectifs')">Objectifs / Missions</li>
-    <li onclick="showSection('technologie')">Technologie / Évolution</li>
-  </ul>
-</nav>
-
-<main>
-  <section id="factions">
-    <h2>Factions</h2>
-    </section>
-
-  <section id="univers">
-    <h2>Univers / Monde</h2>
-  </section>
-
-  <section id="personnages">
-    <h2>Personnages</h2>
-  </section>
-
-  <section id="gameplay">
-    <h2>Gameplay / Mécaniques</h2>
-  </section>
-
-  <section id="histoire">
-    <h2>Histoire / Lore</h2>
-   </section>
-
-  <section id="ressources">
-    <h2>Ressources / Économie</h2>
-</section>
-
-  <section id="objectifs">
-    <h2>Objectifs / Missions</h2>
-   </section>
-
-  <section id="technologie">
-    <h2>Technologie / Évolution</h2>
-   </section>
-</main>
-
-
 <script>
 const categories = {
   Faction: [
@@ -73,14 +13,10 @@ const categories = {
     "DungeonCrawler",
     "TurnBaseCombat"
   ],
-  Histoire: [
-  ],
-  Objectif: [
-  ],
-  Ressource: [
-  ],
-  Technologie: [
-  ]
+  Histoire: [ ],
+  Objectif: [ ],
+  Ressource: [ ],
+  Technologie: [ ]
 };
 
 function showSection(id) {
@@ -94,14 +30,17 @@ function showSection(id) {
     document.getElementById(id).appendChild(list);
   }
   list.innerHTML = '';
+
   let noms = [];
-  if (id === 'factions') noms = categories.Faction;
-  if (id === 'univers') noms = categories.Univers;
-  if (id === 'gameplay') noms = categories.Gameplay;
-  if (id === 'histoire') noms = categories.Histoire;
-  if (id === 'objectifs') noms = categories.Objectif;
-  if (id === 'ressources') noms = categories.Ressource;
-  if (id === 'technologie') noms = categories.Technologie;
+  let dossier = "";
+  if (id === 'factions') { noms = categories.Faction; dossier = "factions"; }
+  if (id === 'univers') { noms = categories.Univers; dossier = "univers"; }
+  if (id === 'gameplay') { noms = categories.Gameplay; dossier = "gameplay"; }
+  if (id === 'histoire') { noms = categories.Histoire; dossier = "histoire"; }
+  if (id === 'objectifs') { noms = categories.Objectif; dossier = "objectifs"; }
+  if (id === 'ressources') { noms = categories.Ressource; dossier = "ressources"; }
+  if (id === 'technologie') { noms = categories.Technologie; dossier = "technologie"; }
+
   noms.forEach(name => {
     const li = document.createElement('li');
     const a = document.createElement('a');
@@ -112,5 +51,3 @@ function showSection(id) {
   });
 }
 </script>
-</body>
-</html>
