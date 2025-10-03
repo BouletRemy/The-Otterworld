@@ -85,8 +85,7 @@ const categories = {
   Faction: [
     "Rat",
     "Robot",
-    "Tortue",
-    "Loutre"
+    "Tortue"
   ],
   Univers: [
     "Beginning"
@@ -128,10 +127,38 @@ function showSection(id) {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.textContent = name;
-    a.href = dossier + '/' + name + '.html'; // lien vers ton fichier
+    a.href = "#";
+    a.onclick = function(e) {
+      e.preventDefault();
+      fetch(dossier + '/' + name + '.html')
+        .then(response => response.text())
+        .then(html => {
+          // Affiche le contenu dans la section
+          let contentDiv = document.getElementById(id).querySelector('.dynamic-content');
+          if (!contentDiv) {
+            contentDiv = document.createElement('div');
+            contentDiv.className = 'dynamic-content';
+            document.getElementById(id).appendChild(contentDiv);
+          }
+          contentDiv.innerHTML = html;
+        })
+        .catch(() => {
+          let contentDiv = document.getElementById(id).querySelector('.dynamic-content');
+          if (!contentDiv) {
+            contentDiv = document.createElement('div');
+            contentDiv.className = 'dynamic-content';
+            document.getElementById(id).appendChild(contentDiv);
+          }
+          contentDiv.innerHTML = "<em>Impossible de charger le contenu.</em>";
+        });
+    };
     li.appendChild(a);
     list.appendChild(li);
   });
+
+  // Nettoie le contenu dynamique si on change de section
+  let contentDiv = document.getElementById(id).querySelector('.dynamic-content');
+  if (contentDiv) contentDiv.innerHTML = '';
 }
 </script>
 
