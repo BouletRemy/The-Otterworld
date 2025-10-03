@@ -12,19 +12,19 @@
 
 <nav>
   <ul>
-    <li onclick="showSection('factions')">Factions</li>
+    <li onclick="showSection('faction')">Factions</li>
     <li onclick="showSection('univers')">Univers / Monde</li>
-    <li onclick="showSection('personnages')">Personnages</li>
+    <li onclick="showSection('personnage')">Personnages</li>
     <li onclick="showSection('gameplay')">Gameplay / Mécaniques</li>
     <li onclick="showSection('histoire')">Histoire / Lore</li>
-    <li onclick="showSection('ressources')">Ressources / Économie</li>
-    <li onclick="showSection('objectifs')">Objectifs / Missions</li>
+    <li onclick="showSection('ressource')">Ressource / Économie</li>
+    <li onclick="showSection('objectif')">Objectifs / Missions</li>
     <li onclick="showSection('technologie')">Technologie / Évolution</li>
   </ul>
 </nav>
 
 <main>
-  <section id="factions">
+  <section id="faction">
     <h2>Factions</h2>
     </section>
 
@@ -32,7 +32,7 @@
     <h2>Univers / Monde</h2>
   </section>
 
-  <section id="personnages">
+  <section id="personnage">
     <h2>Personnages</h2>
   </section>
 
@@ -44,11 +44,11 @@
     <h2>Histoire / Lore</h2>
    </section>
 
-  <section id="ressources">
-    <h2>Ressources / Économie</h2>
+  <section id="ressource">
+    <h2>ressource / Économie</h2>
 </section>
 
-  <section id="objectifs">
+  <section id="objectif">
     <h2>Objectifs / Missions</h2>
    </section>
 
@@ -93,12 +93,12 @@ function showSection(id) {
 
   let noms = [];
   let dossier = "";
-  if (id === 'factions') { noms = categories.Faction; dossier = "Faction"; }
+  if (id === 'faction') { noms = categories.Faction; dossier = "Faction"; }
   if (id === 'univers') { noms = categories.Univers; dossier = "Univers"; }
   if (id === 'gameplay') { noms = categories.Gameplay; dossier = "Gameplay"; }
   if (id === 'histoire') { noms = categories.Histoire; dossier = "Histoire"; }
-  if (id === 'objectifs') { noms = categories.Objectif; dossier = "Objectif"; }
-  if (id === 'ressources') { noms = categories.Ressource; dossier = "Ressource"; }
+  if (id === 'objectif') { noms = categories.Objectif; dossier = "Objectif"; }
+  if (id === 'ressource') { noms = categories.Ressource; dossier = "Ressource"; }
   if (id === 'technologie') { noms = categories.Technologie; dossier = "Technologie"; }
 
   noms.forEach(name => {
