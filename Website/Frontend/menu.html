@@ -106,12 +106,19 @@ function showSection(id) {
   sections.forEach(sec => sec.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 
-  let list = document.getElementById(id).querySelector('ul');
-  if (!list) {
-    list = document.createElement('ul');
-    document.getElementById(id).appendChild(list);
-  }
-  list.innerHTML = '';
+  let section = document.getElementById(id);
+
+  // Supprime ancienne liste, barre et contenu dynamique
+  let oldList = section.querySelector('ul');
+  if (oldList) oldList.remove();
+  let oldHr = section.querySelector('.choice-separator');
+  if (oldHr) oldHr.remove();
+  let oldContent = section.querySelector('.dynamic-content');
+  if (oldContent) oldContent.remove();
+
+  // Crée la nouvelle liste
+  let list = document.createElement('ul');
+  section.appendChild(list);
 
   let noms = [];
   let dossier = "";
@@ -130,25 +137,19 @@ function showSection(id) {
     a.href = "#";
     a.onclick = function(e) {
       e.preventDefault();
+      // Ajoute le contenu chargé sous la barre horizontale
+      let contentDiv = section.querySelector('.dynamic-content');
+      if (!contentDiv) {
+        contentDiv = document.createElement('div');
+        contentDiv.className = 'dynamic-content';
+        section.appendChild(contentDiv);
+      }
       fetch(dossier + '/' + name + '.html')
         .then(response => response.text())
         .then(html => {
-          // Affiche le contenu dans la section
-          let contentDiv = document.getElementById(id).querySelector('.dynamic-content');
-          if (!contentDiv) {
-            contentDiv = document.createElement('div');
-            contentDiv.className = 'dynamic-content';
-            document.getElementById(id).appendChild(contentDiv);
-          }
           contentDiv.innerHTML = html;
         })
         .catch(() => {
-          let contentDiv = document.getElementById(id).querySelector('.dynamic-content');
-          if (!contentDiv) {
-            contentDiv = document.createElement('div');
-            contentDiv.className = 'dynamic-content';
-            document.getElementById(id).appendChild(contentDiv);
-          }
           contentDiv.innerHTML = "<em>Impossible de charger le contenu.</em>";
         });
     };
@@ -156,11 +157,21 @@ function showSection(id) {
     list.appendChild(li);
   });
 
-  // Nettoie le contenu dynamique si on change de section
-  let contentDiv = document.getElementById(id).querySelector('.dynamic-content');
-  if (contentDiv) contentDiv.innerHTML = '';
+  // Ajoute la barre horizontale après la liste
+  if (noms.length > 0) {
+    const hr = document.createElement('hr');
+    hr.className = 'choice-separator';
+    section.appendChild(hr);
+  }
+
+  // Ajoute le conteneur pour le contenu dynamique (vide au départ)
+  const contentDiv = document.createElement('div');
+  contentDiv.className = 'dynamic-content';
+  section.appendChild(contentDiv);
 }
 </script>
+
+
 
 </body>
 </html>
