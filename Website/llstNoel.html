@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Liste de Peintures et Pinceaux Citadel 🎨</title>
+  <title>Liste de Peintures et Idées Cadeaux 🎨</title>
   <style>
     body {
       font-family: "Poppins", sans-serif;
@@ -36,11 +36,16 @@
       color: #333;
     }
 
+    p {
+      text-align: center;
+      color: #555;
+    }
+
     .section {
       margin-top: 40px;
     }
 
-    .paint-list, .brush-list {
+    .paint-list, .brush-list, .gift-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 14px;
@@ -55,16 +60,19 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
       transition: transform .15s;
+      text-align: center;
     }
 
     .item:hover {
       transform: translateY(-4px);
     }
 
-    .paint-name, .brush-name {
+    .paint-name, .brush-name, .gift-name {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
+      flex-direction: column;
     }
 
     .swatch {
@@ -75,22 +83,31 @@
       display: inline-block;
     }
 
-    .paint-name a, .brush-name a {
+    .paint-name a, .brush-name a, .gift-name a {
       text-decoration: none;
       color: #0b3d91;
       font-weight: 700;
       font-size: 1.05rem;
     }
 
-    .paint-name a:hover, .brush-name a:hover {
+    .paint-name a:hover, .brush-name a:hover, .gift-name a:hover {
       text-decoration: underline;
     }
 
-    .paint-type, .brush-type {
+    .paint-type, .brush-type, .gift-type {
       display: block;
       margin-top: 6px;
       color: #666;
       font-size: 0.9rem;
+    }
+
+    .gift-img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      margin: 8px auto;
+      display: block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -103,132 +120,81 @@
   </style>
 </head>
 <body>
-  <header>🎨 Liste de Peintures & Pinceaux Citadel</header>
+  <header>🎨 Liste de Peintures & Idées Cadeaux Citadel</header>
+
+  <p>Voici les peintures et accessoires dont j’ai besoin pour terminer mes figurines.  
+  J’ai pris la marque associée à Warhammer, mais il est possible de trouver des équivalents chez Army Painter ou d’autres marques.</p>
 
   <main>
+    <!-- PEINTURES -->
     <section>
       <h2>Mes Peintures</h2>
       <ul class="paint-list">
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#0f1b2a"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Base-Naggaroth-Night-2019" target="_blank" rel="noopener">Naggaroth Night</a>
-          </div>
-          <span class="paint-type">Base</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#1a1a1a"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/shade-nuln-oil-18ml-2022" target="_blank" rel="noopener">Nuln Oil</a>
-          </div>
-          <span class="paint-type">Shade</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#5a2a6b"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Layer-Xereus-Purple-2019" target="_blank" rel="noopener">Xereus Purple</a>
-          </div>
-          <span class="paint-type">Layer</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#ffffff; border:1px solid #ddd"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Layer-White-Scar-2019" target="_blank" rel="noopener">White Scar</a>
-          </div>
-          <span class="paint-type">Layer</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#f1e6d6"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Base-Rakarth-Flesh-2019" target="_blank" rel="noopener">Rakarth Flesh</a>
-          </div>
-          <span class="paint-type">Base</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#6b4b33"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/shade-agrax-earthshade-18ml-2022" target="_blank" rel="noopener">Agrax Earthshade</a>
-          </div>
-          <span class="paint-type">Shade</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#000000"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Base-Abaddon-Black-2019" target="_blank" rel="noopener">Abaddon Black</a>
-          </div>
-          <span class="paint-type">Base</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#154d2d"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Base-Caliban-Green-2019" target="_blank" rel="noopener">Caliban Green</a>
-          </div>
-          <span class="paint-type">Base</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#6fe06a"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Layer-Warpstone-Glow-2019" target="_blank" rel="noopener">Warpstone Glow</a>
-          </div>
-          <span class="paint-type">Layer</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#7fcf6a"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Layer-Moot-Green-2019" target="_blank" rel="noopener">Moot Green</a>
-          </div>
-          <span class="paint-type">Layer</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#ffd84d"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Layer-Flash-Gitz-Yellow-2019" target="_blank" rel="noopener">Flash Gitz Yellow</a>
-          </div>
-          <span class="paint-type">Layer</span>
-        </li>
-        <li class="item">
-          <div class="paint-name">
-            <span class="swatch" style="background:#f9f0f4"></span>
-            <a href="https://www.warhammer.com/en-WW/shop/Technical-Lahmian-Medium-2019" target="_blank" rel="noopener">Lahmian Medium</a>
-          </div>
-          <span class="paint-type">Technical</span>
-        </li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#0f1b2a"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Naggaroth-Night-2019" target="_blank">Naggaroth Night</a></div><span class="paint-type">Base</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#1a1a1a"></span><a href="https://www.warhammer.com/en-WW/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a></div><span class="paint-type">Shade</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#5a2a6b"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Xereus-Purple-2019" target="_blank">Xereus Purple</a></div><span class="paint-type">Layer</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#ffffff; border:1px solid #ddd"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-White-Scar-2019" target="_blank">White Scar</a></div><span class="paint-type">Layer</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#f1e6d6"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Rakarth-Flesh-2019" target="_blank">Rakarth Flesh</a></div><span class="paint-type">Base</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#6b4b33"></span><a href="https://www.warhammer.com/en-WW/shop/shade-agrax-earthshade-18ml-2022" target="_blank">Agrax Earthshade</a></div><span class="paint-type">Shade</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#000000"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Abaddon-Black-2019" target="_blank">Abaddon Black</a></div><span class="paint-type">Base</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#154d2d"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Caliban-Green-2019" target="_blank">Caliban Green</a></div><span class="paint-type">Base</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#6fe06a"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Warpstone-Glow-2019" target="_blank">Warpstone Glow</a></div><span class="paint-type">Layer</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#7fcf6a"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Moot-Green-2019" target="_blank">Moot Green</a></div><span class="paint-type">Layer</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#ffd84d"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Flash-Gitz-Yellow-2019" target="_blank">Flash Gitz Yellow</a></div><span class="paint-type">Layer</span></li>
+        <li class="item"><div class="paint-name"><span class="swatch" style="background:#f9f0f4"></span><a href="https://www.warhammer.com/en-WW/shop/Technical-Lahmian-Medium-2019" target="_blank">Lahmian Medium</a></div><span class="paint-type">Technical</span></li>
       </ul>
     </section>
 
+    <!-- PINCEAUX -->
     <section class="section">
-      <h2>🖌️ Mes Pinceaux Citadel</h2>
+      <h2>🖌️ Pinceaux Citadel</h2>
+      <p>Voici quelques pinceaux de référence Citadel. N’importe quel équivalent fera aussi l’affaire.</p>
       <ul class="brush-list">
-        <li class="item">
-          <div class="brush-name">
-            <a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Base-Brush-S" target="_blank" rel="noopener">Base S</a>
-          </div>
-          <span class="brush-type">Pour les aplats</span>
-        </li>
-        <li class="item">
-          <div class="brush-name">
-            <a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Layer-Brush-M" target="_blank" rel="noopener">Layer M</a>
-          </div>
-          <span class="brush-type">Pour les détails et éclaircissements</span>
-        </li>
-        <li class="item">
-          <div class="brush-name">
-            <a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Shade-Brush-M" target="_blank" rel="noopener">Shade M</a>
-          </div>
-          <span class="brush-type">Pour appliquer les lavis</span>
-        </li>
-        <li class="item">
-          <div class="brush-name">
-            <a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Dry-Brush-L" target="_blank" rel="noopener">Dry L</a>
-          </div>
-          <span class="brush-type">Pour les brossages à sec</span>
-        </li>
+        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Base-Brush-S" target="_blank">Base S</a></div><span class="brush-type">Pour les aplats</span></li>
+        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Layer-Brush-M" target="_blank">Layer M</a></div><span class="brush-type">Pour les détails et éclaircissements</span></li>
+        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Shade-Brush-M" target="_blank">Shade M</a></div><span class="brush-type">Pour appliquer les lavis</span></li>
+        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-WW/shop/Citadel-Colour-Dry-Brush-L" target="_blank">Dry L</a></div><span class="brush-type">Pour les brossages à sec</span></li>
       </ul>
     </section>
-  </main>
 
-  <footer>
-     Noël 2025 - Créé par Rémy 🦦
-  </footer>
-</body>
-</html>
+    <!-- AUTRES IDÉES -->
+    <section class="section">
+      <h2>🎁 Autres Idées Cadeaux</h2>
+      <ul class="gift-list">
+        <li class="item">
+          <div class="gift-name">
+            <a href="https://store.playstation.com/fr-fr/product/EP0700-PPSA15153_00-0000000000000000" target="_blank">Dragon Quest Monsters : Le Prince des ombres</a>
+          </div>
+          <img src="https://cdn.cdkeys.com/700x700/media/catalog/product/d/r/dragon-quest-monsters-the-dark-prince-switch-cover.jpg" alt="Dragon Quest Monsters" class="gift-img">
+          <span class="gift-type">Jeu Nintendo Switch</span>
+        </li>
+
+        <li class="item">
+          <div class="gift-name">
+            <a href="https://store.anycubic.com/products/anycubic-uv-resin" target="_blank">Résine Anycubic UV Grey HD</a>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0259/5128/9536/products/anycubic-uv-resin-gray.jpg" alt="Résine Anycubic UV" class="gift-img">
+          <span class="gift-type">Pour impression 3D</span>
+        </li>
+
+        <li class="item">
+          <div class="gift-name">
+            <span>Une bonne bouteille 🍾</span>
+          </div>
+          <img src="https://cdn-icons-png.flaticon.com/512/3130/3130323.png" alt="Alcool" class="gift-img">
+          <span class="gift-type">Vodka, rhum, bière, gin, whisky... (je ne suis pas difficile 😅)</span>
+        </li>
+
+        <li class="item">
+          <div class="gift-name">
+            <a href="https://store.playstation.com/fr-fr/product/EP9000-PPSA08495_00-ELDENRING0000000" target="_blank">DLC Elden Ring : Shadow of the Erdtree</a>
+          </div>
+          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202406/0608/7ec0e34d4d7b92f0d830bb5c7a87e32d46e81d746b15f6b6.jpg" alt="Elden Ring DLC" class="gift-img">
+          <span class="gift-type">Extension du jeu Elden Ring</span>
+        </li>
+
+        <li class="item">
+          <div class="gift-name">
+            <span>Vêtements stylés 👕</span>
+          </div>
+          <img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" alt="Vêtements stylés" class="gift-img">
