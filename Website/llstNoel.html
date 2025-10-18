@@ -1,154 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liste de Noël 🎁</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Liste de Peintures Citadel 🎨</title>
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background-color: #f6f9fc;
-      color: #333;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #d6336c;
-      color: white;
-      padding: 20px 0;
-      font-size: 1.8em;
-      letter-spacing: 1px;
-    }
-
-    main {
-      max-width: 600px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 30px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      background: #ffe8f0;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.3s;
-    }
-
-    li:hover {
-      background: #ffd6e0;
-    }
-
-    .item-name {
-      font-weight: bold;
-    }
-
-    .item-status {
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    footer {
-      margin-top: 40px;
-      color: #777;
-      font-size: 0.9em;
-    }
-
-    button {
-      background-color: #d6336c;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 8px 12px;
-      cursor: pointer;
-      font-size: 0.9em;
-    }
-
-    button:hover {
-      background-color: #b82d5c;
-    }
+    body { font-family: "Poppins", sans-serif; background:#f3f6fa; color:#222; margin:0; padding:0; }
+    header { background:#343a40; color:#fff; padding:18px 0; text-align:center; font-size:1.6rem; }
+    main { max-width:780px; margin:36px auto; background:#fff; border-radius:12px; padding:26px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+    h2 { text-align:center; margin-top:0; color:#333; }
+    .paint-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; list-style:none; padding:0; margin:20px 0 0 0; }
+    .paint-item { background:#eef2f7; padding:14px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:transform .15s; }
+    .paint-item:hover { transform:translateY(-4px); }
+    .paint-name { display:flex; align-items:center; gap:10px; }
+    .swatch { width:18px; height:18px; border-radius:50%; border:1px solid rgba(0,0,0,0.08); display:inline-block; }
+    .paint-name a { text-decoration:none; color:#0b3d91; font-weight:700; font-size:1.05rem; }
+    .paint-name a:hover { text-decoration:underline; }
+    .paint-type { display:block; margin-top:6px; color:#666; font-size:0.9rem; }
+    footer { text-align:center; color:#777; font-size:0.9rem; margin-top:26px; padding-bottom:18px; }
   </style>
 </head>
 <body>
-
-  <header>🎄 Ma Liste de Noël 🎁</header>
+  <header>🎨 Liste de Peintures Citadel</header>
 
   <main>
-    <h2>Idées de cadeaux</h2>
-    <ul id="gift-list">
-      <ul class="paint-list">
-       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Base-Naggaroth-Night" target="_blank">Naggaroth Night</a></span><br>
+    <h2>Mes Peintures</h2>
+
+    <ul class="paint-list">
+      <li class="paint-item">
+        <div class="paint-name">
+          <span class="swatch" style="background:#0f1b2a"></span>
+          <a href="https://www.warhammer.com/en-WW/shop/Base-Naggaroth-Night-2019?srsltid=AfmBOooH9lpGrym51tvNz2tsn17KXJ6QYUZH8QgyT5BweuUrKlGN94Pb" target="_blank" rel="noopener">Naggaroth Night</a>
+        </div>
         <span class="paint-type">Base</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Shade-Nuln-Oil" target="_blank">Nuln Oil</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#1a1a1a"></span>
+          <a href="https://www.warhammer.com/en-US/shop/shade-nuln-oil-18ml-2022?srsltid=AfmBOorYR8FTRrrZFx7-v2msyfOWS5Xh5DUkUYJCZn3VHVKkj81lq7WO" target="_blank" rel="noopener">Nuln Oil</a>
+        </div>
         <span class="paint-type">Shade</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Layer-Xereus-Purple" target="_blank">Xereus Purple</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#5a2a6b"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Layer-Xereus-Purple-2019?srsltid=AfmBOoqaepPtozp7G5nPui4nWf0MvamhRmncJvYYKueEhT1W5rHUvROz" target="_blank" rel="noopener">Xereus Purple</a>
+        </div>
         <span class="paint-type">Layer</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Layer-White-Scar" target="_blank">White Scar</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#ffffff; border:1px solid #ddd"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Layer-White-Scar-2019?srsltid=AfmBOopErLH9KQYPrRlAlgXUP7Xo9erWgpgYG5FY_F9libFYwjCyIs51" target="_blank" rel="noopener">White Scar</a>
+        </div>
         <span class="paint-type">Layer</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Base-Rakarth-Flesh" target="_blank">Rakarth Flesh</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#f1e6d6"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Base-Rakarth-Flesh-2019?srsltid=AfmBOopub40SfAE43VCWR-R0ljqUyBkKnD-DTyLUsTZpKHURYCF2wp6w" target="_blank" rel="noopener">Rakarth Flesh</a>
+        </div>
         <span class="paint-type">Base</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Shade-Agrax-Earthshade" target="_blank">Agrax Earthshade</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#6b4b33"></span>
+          <a href="https://www.warhammer.com/en-US/shop/shade-agrax-earthshade-18ml-2022?srsltid=AfmBOoqOgwgT09mfZZb1dbfvQ-aXIq18TDhTvX1BCzCCcU05QrRGvBQ-" target="_blank" rel="noopener">Agrax Earthshade</a>
+        </div>
         <span class="paint-type">Shade</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Base-Abaddon-Black" target="_blank">Abaddon Black</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#000000"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Base-Abaddon-Black-2019?srsltid=AfmBOopQAmvUaYEJ5JNgn7mXzJolUGrW6rRzmh2zXqsrcE0F4bq2Z99M" target="_blank" rel="noopener">Abaddon Black</a>
+        </div>
         <span class="paint-type">Base</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Base-Caliban-Green" target="_blank">Caliban Green</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#154d2d"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Base-Caliban-Green-2019?srsltid=AfmBOop3djVX4bGCiP2uot9k_g3skY7etCH7tmdR2WCAY9rGkbqKEWgU" target="_blank" rel="noopener">Caliban Green</a>
+        </div>
         <span class="paint-type">Base</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Layer-Warpstone-Glow" target="_blank">Warpstone Glow</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#6fe06a"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Layer-Warpstone-Glow-2019?srsltid=AfmBOoqwVsacv3VhjJr1xgYYkxyqzmUoDx5JYjIn4B9rbCR1jddmyHmH" target="_blank" rel="noopener">Warpstone Glow</a>
+        </div>
         <span class="paint-type">Layer</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Layer-Moot-Green" target="_blank">Moot Green</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#7fcf6a"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Layer-Moot-Green-2019?srsltid=AfmBOoo2x2NECkoJRUbVTIJSafrPGm-knwMR3BhwsVn2G6kYBzbfzRjg" target="_blank" rel="noopener">Moot Green</a>
+        </div>
         <span class="paint-type">Layer</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Layer-Flash-Gitz-Yellow" target="_blank">Flash Gitz Yellow</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#ffd84d"></span>
+          <a href="https://www.warhammer.com/en-WW/shop/Layer-Flash-Gitz-Yellow-2019?srsltid=AfmBOop0MG9hgYAJzWxi4_xXCXgE_D-msDeqKVkT4C8WGI6tHCYanJJY" target="_blank" rel="noopener">Flash Gitz Yellow</a>
+        </div>
         <span class="paint-type">Layer</span>
       </li>
+
       <li class="paint-item">
-        <span class="paint-name"><a href="https://www.games-workshop.com/en-FR/Citadel-Technical-Lahmian-Medium" target="_blank">Lahmian Medium</a></span><br>
+        <div class="paint-name">
+          <span class="swatch" style="background:#f9f0f4"></span>
+          <a href="https://www.warhammer.com/en-US/shop/Technical-Lahmian-Medium-2019?srsltid=AfmBOoo_xXz9Yk5ZUShOpTL_qOm7jhfSboQ_oo5L9TnJHSUkm-E7J60I" target="_blank" rel="noopener">Lahmian Medium</a>
+        </div>
         <span class="paint-type">Technical</span>
       </li>
-        </ul>
-
     </ul>
-
-    
 
   </main>
 
-  <footer>
-    ✨ Fait avec amour pour Noël 2025 ✨
-  </footer>
-
-
+  <footer>🖌️ Liens : pages officielles Warhammer / Games Workshop — vérifie ta région si nécessaire.</footer>
 </body>
 </html>
