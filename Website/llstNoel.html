@@ -16,7 +16,6 @@
       overflow-x: hidden;
     }
 
-    /* Flocons animés */
     body::before {
       content: "❄️ ❅ ❆ ❄️ ❅ ❆";
       position: fixed;
@@ -72,6 +71,13 @@
       text-shadow: 1px 1px 3px #ffd700;
     }
 
+    h3 {
+      text-align: center;
+      color: #145a32;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
     p {
       text-align: center;
       color: #333;
@@ -103,22 +109,6 @@
     .item:hover {
       transform: translateY(-4px);
       box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-    }
-
-    .paint-name, .brush-name, .gift-name {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      flex-direction: column;
-    }
-
-    .swatch {
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      display: inline-block;
     }
 
     .paint-name a, .brush-name a, .gift-name a {
@@ -165,63 +155,112 @@
   <header>🎅 Ma Liste de Noël 🎁</header>
   <main>
 
-    <!-- PEINTURES -->
-    <section>
-      <h2>Mes Peintures</h2>
-      <p>Voici les peintures et accessoires dont j’ai besoin pour terminer mes figurines.</p>
-      <ul class="paint-list">
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#0f1b2a"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Naggaroth-Night-2019" target="_blank">Naggaroth Night</a></div><span class="paint-type">Base</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#1a1a1a"></span><a href="https://www.warhammer.com/en-WW/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a></div><span class="paint-type">Shade</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#5a2a6b"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Xereus-Purple-2019" target="_blank">Xereus Purple</a></div><span class="paint-type">Layer</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#ffffff; border:1px solid #ddd"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-White-Scar-2019" target="_blank">White Scar</a></div><span class="paint-type">Layer</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#f1e6d6"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Rakarth-Flesh-2019" target="_blank">Rakarth Flesh</a></div><span class="paint-type">Base</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#6b4b33"></span><a href="https://www.warhammer.com/en-WW/shop/shade-agrax-earthshade-18ml-2022" target="_blank">Agrax Earthshade</a></div><span class="paint-type">Shade</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#000000"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Abaddon-Black-2019" target="_blank">Abaddon Black</a></div><span class="paint-type">Base</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#154d2d"></span><a href="https://www.warhammer.com/en-WW/shop/Base-Caliban-Green-2019" target="_blank">Caliban Green</a></div><span class="paint-type">Base</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#6fe06a"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Warpstone-Glow-2019" target="_blank">Warpstone Glow</a></div><span class="paint-type">Layer</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#7fcf6a"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Moot-Green-2019" target="_blank">Moot Green</a></div><span class="paint-type">Layer</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#ffd84d"></span><a href="https://www.warhammer.com/en-WW/shop/Layer-Flash-Gitz-Yellow-2019" target="_blank">Flash Gitz Yellow</a></div><span class="paint-type">Layer</span></li>
-        <li class="item"><div class="paint-name"><span class="swatch" style="background:#f9f0f4"></span><a href="https://www.warhammer.com/en-WW/shop/Technical-Lahmian-Medium-2019" target="_blank">Lahmian Medium</a></div><span class="paint-type">Technical</span></li>
-      </ul>
-    </section>
+    <!-- 🎨 PEINTURES -->
+    <section class="section">
+      <h2>Peintures</h2>
+      <p>Pour peindre mes 2 projets que j'ai prévu pour l'instant (ATTENTION : doublons entre les projets) 🖌️</p>
 
-    <!-- PINCEAUX -->
+      <!-- ✅ Partie 1 : Liste existante -->
+      <h3>Tyranides</h3>
+      <img src="source/Capture d'écran 2025-10-25 173823.png" alt="Tyranid Vert" class="gift-img">
+
+      <ul class="paint-list">
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Naggaroth-Night-2019" target="_blank">Naggaroth Night</a><span class="paint-type">Base</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a><span class="paint-type">Shade</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Xereus-Purple-2019" target="_blank">Xereus Purple</a><span class="paint-type">Layer</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-White-Scar-2019" target="_blank">White Scar</a><span class="paint-type">Layer</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Rakarth-Flesh-2019" target="_blank">Rakarth Flesh</a><span class="paint-type">Base</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-agrax-earthshade-18ml-2022" target="_blank">Agrax Earthshade</a><span class="paint-type">Shade</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Abaddon-Black-2019" target="_blank">Abaddon Black</a><span class="paint-type">Base</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Caliban-Green-2019" target="_blank">Caliban Green</a><span class="paint-type">Base</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Warpstone-Glow-2019" target="_blank">Warpstone Glow</a><span class="paint-type">Layer</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Moot-Green-2019" target="_blank">Moot Green</a><span class="paint-type">Layer</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Flash-Gitz-Yellow-2019" target="_blank">Flash Gitz Yellow</a><span class="paint-type">Layer</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Technical-Lahmian-Medium-2019" target="_blank">Lahmian Medium</a><span class="paint-type">Technical</span></li>
+      </ul>
+
+      <!-- Partie 2 : Lilith -->
+      <h3>Lilith de Diablo IV</h3>
+      <img src="https://i.ebayimg.com/images/g/QfMAAOSwkxJm1t3z/s-l1600.webp" alt="Lilith Diablo Statue" class="gift-img">
+
+      <ul class="paint-list">
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Kislev-Flesh-2019" target="_blank">Kislev Flesh</a><span class="paint-type">Layer — Peau</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-reikland-fleshshade-18ml-2022" target="_blank">Reikland Fleshshade</a><span class="paint-type">Shade — Peau</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Pallid-Wych-Flesh-2019" target="_blank">Pallid Wych Flesh</a><span class="paint-type">Layer — Peau</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-druchii-violet-18ml-2022" target="_blank">Druchii Violet</a><span class="paint-type">Shade — Peau / Ailes</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Naggaroth-Night-2019" target="_blank">Naggaroth Night</a><span class="paint-type">Base — Ailes</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Xereus-Purple-2019" target="_blank">Xereus Purple</a><span class="paint-type">Layer — Ailes</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-carroburg-crimson-18ml-2022" target="_blank">Carroburg Crimson</a><span class="paint-type">Shade — Ailes</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Ushabti-Bone-2019" target="_blank">Ushabti Bone</a><span class="paint-type">Base — Ailes / Os</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a><span class="paint-type">Shade — Ombres</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-drakenhof-nightshade-18ml-2022" target="_blank">Drakenhof Nightshade</a><span class="paint-type">Shade — Ombres bleutées</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Doombull-Brown-2019" target="_blank">Doombull Brown</a><span class="paint-type">Base — Os / Cuir</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Rhinox-Hide-2019" target="_blank">Rhinox Hide</a><span class="paint-type">Base — Os / Cuir</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Screaming-Skull-2019" target="_blank">Screaming Skull</a><span class="paint-type">Layer — Os</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Dawnstone-2019" target="_blank">Dawnstone</a><span class="paint-type">Layer — Cheveux / Métal</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Leadbelcher-2019" target="_blank">Leadbelcher</a><span class="paint-type">Base — Métal</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Runefang-Steel-2019" target="_blank">Runefang Steel</a><span class="paint-type">Layer — Métal</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Retributor-Armour-2019" target="_blank">Retributor Armour</a><span class="paint-type">Base — Or</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Zandri-Dust-2019" target="_blank">Zandri Dust</a><span class="paint-type">Base — Crâne</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Mephiston-Red-2019" target="_blank">Mephiston Red</a><span class="paint-type">Base — Sang</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Technical-Blood-for-the-Blood-God-2019" target="_blank">Blood for the Blood God</a><span class="paint-type">Technical — Sang</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Mechanicus-Standard-Grey-2019" target="_blank">Mechanicus Standard Grey</a><span class="paint-type">Base — Socle</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a><span class="paint-type">Shade — Socle</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Dawnstone-2019" target="_blank">Dawnstone</a><span class="paint-type">Layer — Socle</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Ushabti-Bone-2019" target="_blank">Ushabti Bone</a><span class="paint-type">Base — Socle</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Ryza-Rust-2019" target="_blank">Ryza Rust</a><span class="paint-type">Base — Socle</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Munitorum-Varnish-2019" target="_blank">Munitorum Varnish</a><span class="paint-type">Vernis</span></li>
+        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Technical-Ardcoat-2019" target="_blank">Ardcoat</a><span class="paint-type">Technical — Vernis</span></li>
+      </ul>
+    </section>  
+
+    <!-- 🖌️ PINCEAUX -->
     <section class="section">
       <h2>🖌️ Pinceaux Citadel</h2>
       <ul class="brush-list">
-        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-GB/shop/S-Base-Brush" target="_blank">Base S</a></div><span class="brush-type">Pour les aplats</span></li>
-        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-GB/shop/M-Layer-Brush" target="_blank">Layer M</a></div><span class="brush-type">Pour les détails et éclaircissements</span></li>
-        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-GB/shop/M-Shade-Brush" target="_blank">Shade M</a></div><span class="brush-type">Pour appliquer les lavis</span></li>
-        <li class="item"><div class="brush-name"><a href="https://www.warhammer.com/en-GB/shop/L-Drybrush" target="_blank">Dry L</a></div><span class="brush-type">Pour les brossages à sec</span></li>
+        <li class="item"><a href="https://www.warhammer.com/en-GB/shop/S-Base-Brush" target="_blank">Base S</a><span class="brush-type">Pour les aplats</span></li>
+        <li class="item"><a href="https://www.warhammer.com/en-GB/shop/M-Layer-Brush" target="_blank">Layer M</a><span class="brush-type">Pour les détails</span></li>
+        <li class="item"><a href="https://www.warhammer.com/en-GB/shop/M-Shade-Brush" target="_blank">Shade M</a><span class="brush-type">Pour les lavis</span></li>
+        <li class="item"><a href="https://www.warhammer.com/en-GB/shop/L-Drybrush" target="_blank">Dry L</a><span class="brush-type">Pour brossage à sec</span></li>
       </ul>
     </section>
 
-    <!-- AUTRES IDÉES -->
+    <!-- 🎮 AUTRES IDÉES -->
     <section class="section">
       <h2>🎁 Autres Idées Cadeaux</h2>
       <ul class="gift-list">
-        <li class="item"><div class="gift-name"><a href="https://store.steampowered.com/app/2175540/DRAGON_QUEST_MONSTERS_The_Dark_Prince/" target="_blank">Dragon Quest Monsters : Le Prince des Ombres</a></div><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2175540/header.jpg" alt="Dragon Quest Monsters" class="gift-img"><span class="gift-type">Jeu PC – Steam</span></li>
-        <li class="item"><div class="gift-name"><a href="https://fr.anycubic.com/products/resine-uv-coloree?variant=45009569513785" target="_blank">Résine Anycubic UV Grey HD</a></div><img src="https://fr.anycubic.com/cdn/shop/files/2d0585140e58d1d179115d8fd24d23af_6fe2dc2b-71aa-47c4-abbd-12c8dbc3ed04.png?v=1758191418&width=600" alt="Résine Anycubic UV" class="gift-img"><span class="gift-type">Pour impression 3D</span></li>
-        <li class="item"><div class="gift-name"><span>Une bonne bouteille 🍾</span></div><img src="https://cdn.prod2.whisky.fr/media/lmdw/lmdw_large/67110_4_m.jpgde858538951aa20604932.webp" alt="Alcool" class="gift-img"><span class="gift-type">Vodka, rhum, bière, gin, whisky...</span></li>
-        <li class="item"><div class="gift-name"><a href="https://store.steampowered.com/app/2778580/ELDEN_RING_Shadow_of_the_Erdtree/" target="_blank">DLC Elden Ring : Shadow of the Erdtree</a></div><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2778580/header.jpg" alt="Elden Ring DLC" class="gift-img"><span class="gift-type">Extension du jeu Elden Ring – Steam</span></li>
-        <li class="item"><div class="gift-name"><span>Vêtements stylés 👕</span></div><img src="https://cdn.armandthiery.fr/products_images/prod_369/k_pull-torsade-murray-at-company-GRIS-CLAIR-front-53.jpg" alt="Vêtements stylés" class="gift-img"><span class="gift-type">Toujours preneur de fringues cool 😎</span></li>
-        <li class="item"><div class="gift-name"><a href="https://www.hachette-collections.com/fr-fr/collection-warhammer-Combatpatrol/" target="_blank">Abonnement Hachette Warhammer 40,000 : Combat Patrol</a></div><img src="https://www.hachette-collections.com/medias/collections/fr-fr/17C/assets/images//homepage/z1_1.webp" alt="Hachette Warhammer 40k" class="gift-img"><span class="gift-type">Une offre avec plein de figurines différentes !</span></li>
+        <li class="item"><a href="https://store.steampowered.com/app/2175540/" target="_blank">Dragon Quest Monsters</a><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2175540/header.jpg" class="gift-img"><span class="gift-type">Jeu PC</span></li>
+        <li class="item"><a href="https://fr.anycubic.com/products/resine-uv-coloree" target="_blank">Résine Anycubic UV Grey HD</a><img src="https://fr.anycubic.com/cdn/shop/files/2d0585140e58d1d179115d8fd24d23af_6fe2dc2b-71aa-47c4-abbd-12c8dbc3ed04.png?v=1758191418&width=600" class="gift-img"><span class="gift-type">Impression 3D</span></li>
+        <li class="item"><span>Une bonne bouteille 🍾</span><img src="https://cdn.whisky.fr/media/lmdw/lmdw_large/67110_4_m.jpg" class="gift-img"><span class="gift-type">Alcool</span></li>
+        <li class="item"><a href="https://store.steampowered.com/app/2778580" target="_blank">Elden Ring DLC</a><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2778580/header.jpg" class="gift-img"><span class="gift-type">Extension PC</span></li>
+        <li class="item"><a href="https://www.hachette-collections.com/fr-fr/collection-warhammer-Combatpatrol/" target="_blank">Abonnement Hachette Warhammer 40k</a><img src="https://www.hachette-collections.com/medias/collections/fr-fr/17C/assets/images//homepage/z1_1.webp" class="gift-img"><span class="gift-type">Figurines !</span></li>
       </ul>
     </section>
 
-    <!-- RANGEMENT -->
+
+    <section class="section">
+      <h2>👕 Vêtements</h2>
+      <ul class="gift-list">
+        <li class="item"><span>Pour exemple: gillet murray - armand thierry </span><img src="https://cdn.armandthiery.fr/products_images/prod_369/k_pull-torsade-murray-at-company-GRIS-CLAIR-front-53.jpg" class="gift-img"><span class="gift-type">Ce qui me ferai plaisir des hauts t-shirt, pull, gilet et autres. Taille en haut L</span></li>
+      </ul>
+    </section>
+
+
+    <!-- 🗂️ RANGEMENT -->
     <section class="section">
       <h2>🗂️ Rangement pour peinture & pinceaux</h2>
       <ul class="gift-list">
-        <li class="item"><div class="gift-name"><a href="https://www.amazon.fr/dp/B0DL372G1D" target="_blank">Citadel Paint Storage & Organiser</a></div><img src="https://m.media-amazon.com/images/I/81mU3xU01aL._AC_SL1500_.jpg" alt="Citadel Paint Storage Box" class="gift-img"><span class="gift-type">Organiseur pour pots de peinture et pinceaux – Games Workshop</span></li>
+        <li class="item"><a href="https://www.amazon.fr/dp/B0DL372G1D" target="_blank">Citadel Paint Storage</a><img src="https://m.media-amazon.com/images/I/81mU3xU01aL._AC_SL1500_.jpg" class="gift-img"><span class="gift-type">Organiseur GW</span></li>
       </ul>
-    </section>
+    </section>  
 
-    <!-- FIGURINES TYRANIDES -->
+    <!-- TYRANIDES -->
     <section class="section">
-      <h2>🪲 Figurines Tyranides</h2>
+      <h2>🪲 Figurines Tyranides quelques exemples</h2>
       <ul class="gift-list">
-        <li class="item"><p>Des figurines Tyranides/Tyranid</p><img src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106065_Biovore1.jpg?fm=webp&w=920&h=948" alt="Tyranid" class="gift-img"></li>
+        <li class="item"><span></span><img src="https://www.warhammer.com/app/resources/catalog/product/threeSixty/99120106010_Carnifex360/01-01.jpg?fm=webp&w=920" class="gift-img"></li>
+
+        <li class="item"><span></span><img src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106065_Biovore1.jpg?fm=webp&w=920&h=948" class="gift-img"></li>
       </ul>
     </section>
 
