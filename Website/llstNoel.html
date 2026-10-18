@@ -1,271 +1,1859 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>🎄 Ma Liste de Noël</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>🎄 Ma Liste de Noël 2026</title>
+
   <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lora:wght@400;500;600&display=swap');
+
+
+    :root {
+      --rouge: #8f1717;
+      --rouge-fonce: #5e0d0d;
+      --vert: #173d2b;
+      --vert-clair: #285a40;
+
+      --or: #c9a227;
+      --or-clair: #e6cc70;
+
+      --creme: #f8f1df;
+      --papier: #fffaf0;
+
+      --texte: #2b211b;
+
+      --ombre: rgba(42, 20, 10, 0.28);
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
     body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(180deg, #b30000 0%, #145a32 100%);
-      background-attachment: fixed;
-      color: #222;
       margin: 0;
-      padding: 0;
-      position: relative;
+      min-height: 100vh;
+
+      font-family: "Lora", Georgia, serif;
+
+      color: var(--texte);
+
+      background:
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(255,255,255,.08) 0 2px,
+          transparent 3px
+        ),
+
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(255,255,255,.06) 0 2px,
+          transparent 3px
+        ),
+
+        linear-gradient(
+          135deg,
+          #651010 0%,
+          #8f1717 28%,
+          #173d2b 72%,
+          #0d2b1e 100%
+        );
+
+      background-attachment: fixed;
+
       overflow-x: hidden;
     }
 
+
+    /* ===============================
+       NEIGE
+       =============================== */
+
     body::before {
-      content: "❄️ ❅ ❆ ❄️ ❅ ❆";
+      content: "❄   ❅      ❆   ❄       ❅    ❆";
+
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      color: rgba(255,255,255,0.15);
-      font-size: 2rem;
+
+      inset: -10% 0 0 0;
+
+      color: rgba(255,255,255,.17);
+
+      font-size: 25px;
+
+      letter-spacing: 18px;
+
+      line-height: 2.8;
+
       text-align: center;
-      line-height: 2;
-      animation: snow 10s linear infinite;
+
+      white-space: pre-wrap;
+
       pointer-events: none;
-      white-space: pre;
+
+      z-index: 0;
+
+      animation: neige 18s linear infinite;
     }
 
-    @keyframes snow {
-      0% { transform: translateY(-10%); }
-      100% { transform: translateY(110%); }
+
+    @keyframes neige {
+
+      from {
+        transform: translateY(-5%);
+      }
+
+      to {
+        transform: translateY(110%);
+      }
+
     }
+
+
+    /* ===============================
+       HEADER
+       =============================== */
 
     header {
-      background: linear-gradient(90deg, #b30000, #ffcc00, #145a32);
-      background-size: 300% 300%;
-      animation: lights 6s infinite alternate;
-      color: #fff;
-      padding: 20px 0;
+
+      position: relative;
+
+      z-index: 2;
+
+      padding: 28px 20px 30px;
+
       text-align: center;
-      font-size: 1.8rem;
-      text-shadow: 0 0 8px rgba(0,0,0,0.3);
-      border-bottom: 4px solid #fff;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--rouge-fonce),
+          var(--rouge),
+          #a32626,
+          var(--vert),
+          #102d20
+        );
+
+      border-bottom: 5px solid var(--or);
+
+      box-shadow:
+        0 5px 18px rgba(0,0,0,.35),
+        inset 0 -1px 0 rgba(255,255,255,.25);
     }
 
-    @keyframes lights {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
+
+    header::before,
+    header::after {
+
+      content: "✦";
+
+      color: var(--or-clair);
+
+      font-size: 1.3rem;
+
+      margin: 0 18px;
+
+      vertical-align: middle;
+
+      text-shadow:
+        0 0 8px rgba(255,215,100,.5);
     }
+
+
+    header h1 {
+
+      display: inline-block;
+
+      margin: 0;
+
+      font-family: "Cinzel", Georgia, serif;
+
+      font-size:
+        clamp(1.7rem, 5vw, 2.8rem);
+
+      letter-spacing: 2px;
+
+      text-shadow:
+        2px 2px 0 rgba(0,0,0,.25),
+        0 0 12px rgba(255,215,100,.25);
+    }
+
+
+    header .annee {
+
+      display: block;
+
+      margin-top: 7px;
+
+      font-size: .95rem;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      color: #f4dfa0;
+    }
+
+
+    /* ===============================
+       CONTENU
+       =============================== */
 
     main {
-      max-width: 820px;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+      position: relative;
+
+      z-index: 1;
+
+      max-width: 1100px;
+
+      margin: 45px auto;
+
+      padding: 40px;
+
+      background:
+        linear-gradient(
+          rgba(255,250,240,.97),
+          rgba(250,241,218,.97)
+        );
+
+      border:
+        1px solid rgba(120,80,20,.4);
+
+      border-radius: 5px;
+
+      box-shadow:
+        0 14px 40px var(--ombre),
+        inset 0 0 0 7px rgba(201,162,39,.08),
+        inset 0 0 0 9px rgba(120,80,20,.08);
     }
 
-    h2 {
-      text-align: center;
-      margin-top: 0;
-      color: #b30000;
-      font-weight: 700;
-      text-shadow: 1px 1px 3px #ffd700;
+
+    main::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 15px;
+
+      border:
+        1px solid rgba(143,23,23,.25);
+
+      pointer-events: none;
     }
 
-    h3 {
-      text-align: center;
-      color: #145a32;
-      font-weight: 700;
-      margin-top: 20px;
-    }
 
-    p {
-      text-align: center;
-      color: #333;
-    }
+    /* ===============================
+       SECTIONS
+       =============================== */
 
     .section {
-      margin-top: 45px;
+
+      margin-top: 55px;
     }
 
-    .paint-list, .brush-list, .gift-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      list-style: none;
-      padding: 0;
-      margin: 20px 0 0 0;
+
+    .section:first-child {
+
+      margin-top: 0;
     }
 
-    .item {
-      background: #fff;
-      padding: 14px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      border: 2px solid #d32f2f;
-      transition: transform 0.15s, box-shadow 0.15s;
+
+    h2 {
+
+      position: relative;
+
+      margin: 0 0 10px;
+
       text-align: center;
-    }
 
-    .item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-    }
+      font-family: "Cinzel", Georgia, serif;
 
-    .paint-name a, .brush-name a, .gift-name a {
-      text-decoration: none;
-      color: #b30000;
+      font-size:
+        clamp(1.4rem, 3vw, 2rem);
+
       font-weight: 700;
-      font-size: 1.05rem;
-      transition: color 0.2s;
+
+      color: var(--rouge-fonce);
+
+      text-shadow:
+        1px 1px 0 #fff;
     }
 
-    .paint-name a:hover, .brush-name a:hover, .gift-name a:hover {
-      color: #ffcc00;
+
+    h2::before,
+    h2::after {
+
+      content: "❧";
+
+      display: inline-block;
+
+      margin: 0 15px;
+
+      color: var(--or);
+
+      font-size: 1.1rem;
+    }
+
+
+    .section-intro {
+
+      max-width: 700px;
+
+      margin:
+        0 auto 25px;
+
+      text-align: center;
+
+      color: #625348;
+
+      font-style: italic;
+
+      line-height: 1.6;
+    }
+
+
+    /* ===============================
+       SÉPARATEUR
+       =============================== */
+
+    .separator {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin: 45px 0 0;
+
+      color: var(--or);
+    }
+
+
+    .separator::before,
+    .separator::after {
+
+      content: "";
+
+      flex: 1;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #c9a227,
+          transparent
+        );
+    }
+
+
+    .separator span {
+
+      font-size: 1.2rem;
+    }
+
+
+    /* ===============================
+       TYRANIDES
+       =============================== */
+
+    .tyranid-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      grid-template-rows:
+        auto auto;
+
+      gap: 22px;
+
+      margin-top: 30px;
+    }
+
+
+    .tyranid-card {
+
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      padding:
+        20px 16px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.96),
+          rgba(248,238,211,.98)
+        );
+
+      border:
+        1px solid #c6a85a;
+
+      border-radius: 5px;
+
+      box-shadow:
+        0 5px 14px rgba(60,35,10,.13),
+        inset 0 0 0 3px rgba(201,162,39,.08);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .tyranid-card:hover {
+
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        0 12px 25px rgba(60,35,10,.22),
+        inset 0 0 0 3px rgba(201,162,39,.12);
+    }
+
+
+    .tyranid-card h3 {
+
+      margin: 0;
+
+      text-align: center;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size: 1rem;
+
+      color: #761010;
+    }
+
+
+    .tyranid-card h3 a {
+
+      color: inherit;
+
+      text-decoration: none;
+    }
+
+
+    .tyranid-card h3 a:hover {
+
+      color: var(--vert);
+
       text-decoration: underline;
     }
 
-    .paint-type, .brush-type, .gift-type {
-      display: block;
-      margin-top: 6px;
-      color: #555;
-      font-size: 0.9rem;
+
+    .tyranid-card img {
+
+      width: 100%;
+
+      height: 210px;
+
+      margin: 12px 0;
+
+      object-fit: contain;
+
+      background: white;
+
+      border:
+        1px solid #d3bd7b;
+
+      border-radius: 3px;
+
+      box-shadow:
+        0 4px 10px rgba(0,0,0,.12);
     }
+
+
+    .tyranid-card .description {
+
+      margin-top: auto;
+
+      text-align: center;
+
+      color: #66584c;
+
+      font-size: .85rem;
+
+      font-style: italic;
+
+      line-height: 1.45;
+    }
+
+
+    .tyranid-card::after {
+
+      content: "✦";
+
+      position: absolute;
+
+      bottom: 7px;
+
+      right: 10px;
+
+      color: #c9a227;
+    }
+
+
+    /* ===============================
+       NORNE
+       =============================== */
+
+    .norne-card {
+
+      grid-column:
+        2 / 4;
+
+      grid-row:
+        1 / 3;
+
+      padding:
+        30px 25px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fffdf5,
+          #f5e7c4
+        );
+
+      border:
+        2px solid #b38b1e;
+
+      box-shadow:
+        0 10px 28px rgba(80,45,10,.22),
+        inset 0 0 0 5px rgba(201,162,39,.10);
+
+      transform:
+        scale(1.025);
+
+      z-index: 2;
+    }
+
+
+    .norne-card:hover {
+
+      transform:
+        scale(1.04)
+        translateY(-5px);
+    }
+
+
+    .norne-card::before {
+
+      content:
+        "★ MA PRÉFÉRÉE ★";
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      text-align: center;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size: .75rem;
+
+      letter-spacing: 2px;
+
+      color: #b38b1e;
+    }
+
+
+    .norne-card h3 {
+
+      font-size: 1.35rem;
+    }
+
+
+    .norne-card img {
+
+      height: 430px;
+
+      border:
+        2px solid #c6a85a;
+
+      box-shadow:
+        0 7px 18px rgba(0,0,0,.18);
+    }
+
+
+    .norne-card .description {
+
+      font-size: .95rem;
+
+      line-height: 1.5;
+    }
+
+
+    /* ===============================
+       CARTES CADEAUX
+       =============================== */
+
+    .gift-list {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+      gap: 22px;
+
+      list-style: none;
+
+      padding: 0;
+
+      margin:
+        25px 0 0;
+    }
+
+
+    .item {
+
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      min-height: 100%;
+
+      padding:
+        20px 17px 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.9),
+          rgba(250,243,225,.95)
+        );
+
+      border:
+        1px solid #c6a85a;
+
+      border-radius: 4px;
+
+      box-shadow:
+        0 5px 12px rgba(60,35,10,.12),
+        inset 0 0 0 3px rgba(201,162,39,.08);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .item:hover {
+
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        0 10px 22px rgba(60,35,10,.2);
+    }
+
+
+    .item::before {
+
+      content: "✦";
+
+      position: absolute;
+
+      top: 7px;
+      left: 10px;
+
+      color: var(--or);
+
+      font-size: .8rem;
+    }
+
+
+    .item::after {
+
+      content: "✦";
+
+      position: absolute;
+
+      bottom: 7px;
+      right: 10px;
+
+      color: var(--or);
+
+      font-size: .8rem;
+    }
+
+
+    .gift-name {
+
+      margin-bottom: 8px;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size: 1.05rem;
+
+      text-align: center;
+    }
+
+
+    .gift-name a {
+
+      color: var(--rouge-fonce);
+
+      text-decoration: none;
+
+      font-weight: 700;
+    }
+
+
+    .gift-name a:hover {
+
+      color: var(--vert);
+
+      text-decoration: underline;
+    }
+
 
     .gift-img {
+
       width: 100%;
-      max-width: 180px;
-      border-radius: 10px;
-      margin: 8px auto;
-      display: block;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+
+      max-width: 190px;
+
+      height: 190px;
+
+      object-fit: contain;
+
+      margin:
+        12px auto;
+
+      background: white;
+
+      border:
+        1px solid #d3bd7b;
+
+      border-radius: 3px;
+
+      box-shadow:
+        0 4px 10px rgba(0,0,0,.12);
     }
+
+
+    .gift-type {
+
+      display: block;
+
+      margin-top: auto;
+
+      padding-top: 10px;
+
+      color: #66584c;
+
+      font-size: .88rem;
+
+      text-align: center;
+
+      font-style: italic;
+
+      line-height: 1.5;
+    }
+
+
+    /* ===============================
+       MEUBLES
+       =============================== */
+
+    .furniture-note {
+
+      max-width: 760px;
+
+      margin:
+        20px auto 0;
+
+      padding:
+        20px 25px;
+
+      background:
+        rgba(23,61,43,.08);
+
+      border-left:
+        5px solid var(--vert);
+
+      border-right:
+        1px solid rgba(23,61,43,.15);
+
+      text-align: center;
+
+      color: #493d34;
+
+      line-height: 1.6;
+    }
+
+
+    .furniture-note strong {
+
+      color: var(--vert);
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+    }
+
+
+    .ikea-link {
+
+      display: inline-block;
+
+      margin-top: 15px;
+
+      color: white !important;
+
+      background:
+        var(--vert);
+
+      padding:
+        10px 18px;
+
+      border-radius: 3px;
+
+      border:
+        1px solid #0e2b1d;
+
+      text-decoration: none !important;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+    }
+
+
+    .ikea-link:hover {
+
+      background:
+        var(--rouge);
+    }
+
+
+    /* ===============================
+       ÉQUIPEMENT
+       =============================== */
+
+    .equipment-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 25px;
+
+      margin-top: 28px;
+    }
+
+
+    .equipment-card {
+
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      padding:
+        24px 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.97),
+          rgba(248,238,211,.98)
+        );
+
+      border:
+        1px solid #c6a85a;
+
+      border-radius: 5px;
+
+      box-shadow:
+        0 7px 18px rgba(60,35,10,.15),
+        inset 0 0 0 3px rgba(201,162,39,.07);
+    }
+
+
+    .equipment-card h3 {
+
+      margin:
+        0 0 5px;
+
+      text-align: center;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      color:
+        var(--rouge-fonce);
+
+      font-size:
+        1.15rem;
+    }
+
+
+    .equipment-card h3 a {
+
+      color: inherit;
+
+      text-decoration: none;
+    }
+
+
+    .equipment-card h3 a:hover {
+
+      color:
+        var(--vert);
+
+      text-decoration:
+        underline;
+    }
+
+
+    .equipment-card img {
+
+      width: 100%;
+
+      max-width: 250px;
+
+      height: 220px;
+
+      margin:
+        12px 0 18px;
+
+      object-fit: contain;
+
+      background: white;
+
+      border:
+        1px solid #d3bd7b;
+
+      border-radius: 3px;
+
+      box-shadow:
+        0 4px 10px rgba(0,0,0,.12);
+    }
+
+
+    .equipment-card p {
+
+      margin:
+        0;
+
+      color:
+        #55483e;
+
+      text-align:
+        center;
+
+      line-height:
+        1.55;
+    }
+
+
+    .equipment-specs {
+
+      width: 100%;
+
+      margin:
+        15px 0 0;
+
+      padding-left:
+        25px;
+
+      color:
+        #55483e;
+
+      font-size:
+        .9rem;
+
+      line-height:
+        1.6;
+    }
+
+
+    .equipment-specs strong {
+
+      color:
+        var(--vert);
+    }
+
+
+    .equipment-link {
+
+      margin-top:
+        16px;
+
+      color:
+        var(--vert) !important;
+
+      text-decoration:
+        underline;
+
+      font-weight:
+        600;
+    }
+
+
+    .equipment-link:hover {
+
+      color:
+        var(--rouge) !important;
+    }
+
+
+    /* ===============================
+       FOOTER
+       =============================== */
 
     footer {
-      text-align: center;
-      color: #fff;
-      font-size: 0.9rem;
-      margin-top: 26px;
-      padding: 20px;
-      background: rgba(0,0,0,0.6);
-      border-top: 2px solid #fff;
+
+      position: relative;
+
+      z-index: 1;
+
+      padding:
+        28px 20px 35px;
+
+      text-align:
+        center;
+
+      color:
+        #f5e9c4;
+
+      background:
+        linear-gradient(
+          90deg,
+          #510b0b,
+          #6e1111,
+          #123122,
+          #0a2418
+        );
+
+      border-top:
+        4px solid var(--or);
+
+      box-shadow:
+        0 -5px 15px rgba(0,0,0,.25);
     }
+
+
+    footer strong {
+
+      display: block;
+
+      margin-bottom:
+        5px;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:
+        1rem;
+
+      letter-spacing:
+        1px;
+    }
+
+
+    footer span {
+
+      font-size:
+        .85rem;
+
+      opacity:
+        .85;
+    }
+
+
+    /* ===============================
+       RESPONSIVE
+       =============================== */
+
+    @media (max-width: 850px) {
+
+      main {
+
+        margin:
+          25px 15px;
+
+      }
+
+
+      .tyranid-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .norne-card {
+
+        grid-column:
+          1 / 3;
+
+        grid-row:
+          auto;
+      }
+
+
+      .norne-card img {
+
+        height:
+          380px;
+      }
+
+
+      .equipment-grid {
+
+        grid-template-columns:
+          1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      header::before,
+      header::after {
+
+        display:
+          none;
+      }
+
+
+      main {
+
+        margin:
+          15px 8px;
+
+        padding:
+          28px 18px;
+      }
+
+
+      main::before {
+
+        inset:
+          9px;
+      }
+
+
+      h2::before,
+      h2::after {
+
+        margin:
+          0 7px;
+      }
+
+
+      .tyranid-grid {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .norne-card {
+
+        grid-column:
+          auto;
+
+        grid-row:
+          auto;
+
+        transform:
+          none;
+      }
+
+
+      .norne-card:hover {
+
+        transform:
+          translateY(-5px);
+      }
+
+
+      .norne-card img {
+
+        height:
+          330px;
+      }
+
+
+      .gift-list {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .section {
+
+        margin-top:
+          40px;
+      }
+
+    }
+
+
+    /* ===============================
+       ACCESSIBILITÉ
+       =============================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation:
+          none !important;
+
+        transition:
+          none !important;
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 <body>
-  <header>🎅 Ma Liste de Noël 🎁</header>
+
+
+  <!-- ======================================
+       HEADER
+       ====================================== -->
+
+  <header>
+
+    <h1>
+      🎄 Ma Liste de Noël 🎁
+    </h1>
+
+    <span class="annee">
+      Noël 2026
+    </span>
+
+  </header>
+
+
+
   <main>
 
-    <!-- 🎨 PEINTURES -->
+<!-- ======================================
+     TYRANIDES
+     ====================================== -->
+
+<section class="section">
+
+  <h2>
+    🪲 Figurines Tyranides
+  </h2>
+
+  <p class="section-intro">
+
+    Quelques figurines Tyranides qui me feraient
+    particulièrement plaisir. c'est pas exhaustif alors tant que c'est Tyrannides ça me va (sauf venomthrope, primat ailé,psychophage,tyranocyte et toxicrene)
+
+  </p>
+
+
+  <div class="tyranid-grid">
+
+
+    <!-- ==================================
+         HORREURS DE LA RUCHE
+         ================================== -->
+
+    <article class="tyranid-card">
+
+      <h3>
+
+        <a
+          href="https://myhobby.place/fr/4820-horreurs-de-la-ruche.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Horreurs de la Ruche
+        </a>
+
+      </h3>
+
+
+      <!-- L'image est elle-même cliquable -->
+
+      <a
+        href="https://myhobby.place/fr/4820-horreurs-de-la-ruche.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="product-image-link"
+      >
+
+        <img
+          src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106076_HorrorsHive2.jpg?fm=webp&w=892&h=920"
+          alt="Horreurs de la Ruche"
+        >
+
+      </a>
+
+
+      
+
+    </article>
+
+
+
+    <!-- ==================================
+         EMISSAIRE NORNE
+         ================================== -->
+
+    <article class="tyranid-card norne-card">
+
+      <h3>
+
+        <a
+          href="https://myhobby.place/fr/4282-emissaire-norne.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Émissaire Norne
+        </a>
+
+      </h3>
+
+
+      <a
+        href="https://myhobby.place/fr/4282-emissaire-norne.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="product-image-link"
+      >
+
+        <img
+          src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106064_NornEmissary1.jpg?fm=webp&w=892&h=920"
+          alt="Émissaire Norne"
+        >
+
+      </a>
+
+
+      <span class="description">
+
+        ⭐ Ma figurine Tyranide préférée ⭐
+
+        <br>
+
+        
+
+      </span>
+
+    </article>
+
+
+
+    <!-- ==================================
+         HARUSPEX
+         ================================== -->
+
+    <article class="tyranid-card">
+
+      <h3>
+
+        <a
+          href="https://myhobby.place/fr/2329-exocrine-haruspex.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Haruspex
+        </a>
+
+      </h3>
+
+
+      <a
+        href="https://myhobby.place/fr/2329-exocrine-haruspex.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="product-image-link"
+      >
+
+        <img
+          src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106026_Haruspex01.jpg?fm=webp&w=892&h=920"
+          alt="Haruspex Tyranide"
+        >
+
+      </a>
+
+
+    </article>
+
+
+
+    <!-- ==================================
+         BIOVORE
+         ================================== -->
+
+    <article class="tyranid-card">
+
+      <h3>
+
+        <a
+          href="https://myhobby.place/fr/4285-biovore.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Biovore
+        </a>
+
+      </h3>
+
+
+      <a
+        href="https://myhobby.place/fr/4285-biovore.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="product-image-link"
+      >
+
+        <img
+          src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106065_Biovore1.jpg?fm=webp&w=892&h=920"
+          alt="Biovore Tyranide"
+        >
+
+      </a>
+
+
+ 
+
+    </article>
+
+
+
+    <!-- ==================================
+         HORMAGAUNTS
+         ================================== -->
+
+    <article class="tyranid-card">
+
+      <h3>
+
+        <a
+          href="https://myhobby.place/fr/4279-hormagaunts.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hormagaunts
+        </a>
+
+      </h3>
+
+
+      <a
+        href="https://myhobby.place/fr/4279-hormagaunts.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="product-image-link"
+      >
+
+        <img
+          src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106073_Hormagaunts2.jpg?fm=webp&w=892&h=920"
+          alt="Hormagaunts Tyranides"
+        >
+
+      </a>
+
+
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+    <div class="separator">
+
+      <span>🎄</span>
+
+    </div>
+
+
+
+    <!-- ======================================
+         AUTRES IDÉES
+         ====================================== -->
+
     <section class="section">
-      <h2>Peintures</h2>
-      <p>Pour peindre mes 2 projets que j'ai prévu pour l'instant (ATTENTION : doublons entre les projets) 🖌️</p>
 
-      <!-- ✅ Partie 1 : Liste existante -->
-      <h3>Tyranides</h3>
-      <img src="source/Capture d'écran 2025-10-25 173823.png" alt="Tyranid Vert" class="gift-img">
+      <h2>
+        🎁 Autres Idées Cadeaux
+      </h2>
 
-      <ul class="paint-list">
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Naggaroth-Night-2019" target="_blank">Naggaroth Night</a><span class="paint-type">Base</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a><span class="paint-type">Shade</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Xereus-Purple-2019" target="_blank">Xereus Purple</a><span class="paint-type">Layer</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-White-Scar-2019" target="_blank">White Scar</a><span class="paint-type">Layer</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Rakarth-Flesh-2019" target="_blank">Rakarth Flesh</a><span class="paint-type">Base</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-agrax-earthshade-18ml-2022" target="_blank">Agrax Earthshade</a><span class="paint-type">Shade</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Abaddon-Black-2019" target="_blank">Abaddon Black</a><span class="paint-type">Base</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Caliban-Green-2019" target="_blank">Caliban Green</a><span class="paint-type">Base</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Warpstone-Glow-2019" target="_blank">Warpstone Glow</a><span class="paint-type">Layer</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Moot-Green-2019" target="_blank">Moot Green</a><span class="paint-type">Layer</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Flash-Gitz-Yellow-2019" target="_blank">Flash Gitz Yellow</a><span class="paint-type">Layer</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Technical-Lahmian-Medium-2019" target="_blank">Lahmian Medium</a><span class="paint-type">Technical</span></li>
+
+      <ul class="gift-list">
+
+
+        <!-- RÉSINE -->
+
+        <li class="item">
+
+          <div class="gift-name">
+
+            <a
+              href="https://fr.anycubic.com/products/resine-uv-coloree"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Résine Anycubic UV Grey HD
+            </a>
+
+          </div>
+
+
+          <img
+            src="https://fr.anycubic.com/cdn/shop/files/2d0585140e58d1d179115d8fd24d23af_6fe2dc2b-71aa-47c4-abbd-12c8dbc3ed04.png?v=1758191418&width=600"
+            class="gift-img"
+            alt="Résine Anycubic UV Grey HD"
+          >
+
+
+          <span class="gift-type">
+
+            Impression 3D
+
+          </span>
+
+        </li>
+
+
+
+        <!-- BOUTEILLE -->
+
+        <li class="item">
+
+          <div class="gift-name">
+
+            Une bonne bouteille 🍾
+
+          </div>
+
+
+          <img
+            src="https://cdn.prod2.whisky.fr/media/lmdw/lmdw_large/67110_4_m.jpgde858538951aa20604932.webp"
+            class="gift-img"
+            alt="Une bonne bouteille"
+          >
+
+
+          <span class="gift-type">
+
+            Alcool
+
+          </span>
+
+        </li>
+
+
       </ul>
 
-      <!-- Partie 2 : Lilith -->
-      <h3>Lilith de Diablo IV</h3>
-      <img src="https://i.ebayimg.com/images/g/QfMAAOSwkxJm1t3z/s-l1600.webp" alt="Lilith Diablo Statue" class="gift-img">
-
-      <ul class="paint-list">
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Kislev-Flesh-2019" target="_blank">Kislev Flesh</a><span class="paint-type">Layer — Peau</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-reikland-fleshshade-18ml-2022" target="_blank">Reikland Fleshshade</a><span class="paint-type">Shade — Peau</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Pallid-Wych-Flesh-2019" target="_blank">Pallid Wych Flesh</a><span class="paint-type">Layer — Peau</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-druchii-violet-18ml-2022" target="_blank">Druchii Violet</a><span class="paint-type">Shade — Peau / Ailes</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Naggaroth-Night-2019" target="_blank">Naggaroth Night</a><span class="paint-type">Base — Ailes</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Xereus-Purple-2019" target="_blank">Xereus Purple</a><span class="paint-type">Layer — Ailes</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-carroburg-crimson-18ml-2022" target="_blank">Carroburg Crimson</a><span class="paint-type">Shade — Ailes</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Ushabti-Bone-2019" target="_blank">Ushabti Bone</a><span class="paint-type">Base — Ailes / Os</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a><span class="paint-type">Shade — Ombres</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-drakenhof-nightshade-18ml-2022" target="_blank">Drakenhof Nightshade</a><span class="paint-type">Shade — Ombres bleutées</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Doombull-Brown-2019" target="_blank">Doombull Brown</a><span class="paint-type">Base — Os / Cuir</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Rhinox-Hide-2019" target="_blank">Rhinox Hide</a><span class="paint-type">Base — Os / Cuir</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Screaming-Skull-2019" target="_blank">Screaming Skull</a><span class="paint-type">Layer — Os</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Dawnstone-2019" target="_blank">Dawnstone</a><span class="paint-type">Layer — Cheveux / Métal</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Leadbelcher-2019" target="_blank">Leadbelcher</a><span class="paint-type">Base — Métal</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Runefang-Steel-2019" target="_blank">Runefang Steel</a><span class="paint-type">Layer — Métal</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Retributor-Armour-2019" target="_blank">Retributor Armour</a><span class="paint-type">Base — Or</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Zandri-Dust-2019" target="_blank">Zandri Dust</a><span class="paint-type">Base — Crâne</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Mephiston-Red-2019" target="_blank">Mephiston Red</a><span class="paint-type">Base — Sang</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Technical-Blood-for-the-Blood-God-2019" target="_blank">Blood for the Blood God</a><span class="paint-type">Technical — Sang</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Mechanicus-Standard-Grey-2019" target="_blank">Mechanicus Standard Grey</a><span class="paint-type">Base — Socle</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/shade-nuln-oil-18ml-2022" target="_blank">Nuln Oil</a><span class="paint-type">Shade — Socle</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Layer-Dawnstone-2019" target="_blank">Dawnstone</a><span class="paint-type">Layer — Socle</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Ushabti-Bone-2019" target="_blank">Ushabti Bone</a><span class="paint-type">Base — Socle</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Ryza-Rust-2019" target="_blank">Ryza Rust</a><span class="paint-type">Base — Socle</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Base-Munitorum-Varnish-2019" target="_blank">Munitorum Varnish</a><span class="paint-type">Vernis</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/Technical-Ardcoat-2019" target="_blank">Ardcoat</a><span class="paint-type">Technical — Vernis</span></li>
-      </ul>
-    </section>  
-
-    <!-- 🖌️ PINCEAUX -->
-    <section class="section">
-      <h2>🖌️ Pinceaux Citadel </h2>
-      <p>ou autre marque équivalente en taille je démarre j'ai pas forcemment besoin de qualité pareil mais je ne connait pas toutes les marques</p>
-      <ul class="brush-list">
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/S-Base-Brush" target="_blank">Base S</a><span class="brush-type">Pour les aplats</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/M-Layer-Brush" target="_blank">Layer M</a><span class="brush-type">Pour les détails</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/M-Shade-Brush" target="_blank">Shade M</a><span class="brush-type">Pour les lavis</span></li>
-        <li class="item"><a href="https://www.warhammer.com/fr-FR/shop/L-Drybrush" target="_blank">Dry L</a><span class="brush-type">Pour brossage à sec</span></li>
-      </ul>
     </section>
 
-    <!-- 🎮 AUTRES IDÉES -->
+
+
+    <!-- ======================================
+         VÊTEMENTS
+         ====================================== -->
+
     <section class="section">
-      <h2>🎁 Autres Idées Cadeaux</h2>
+
+      <h2>
+        👕 Vêtements
+      </h2>
+
+
+      <p class="section-intro">
+
+        Pour les vêtements, pas besoin de prendre
+        exactement cet article : c'est surtout pour
+        donner une idée du style qui me ferait plaisir.
+
+      </p>
+
+
       <ul class="gift-list">
-        <li class="item"><a href="https://store.steampowered.com/app/2175540/" target="_blank">Dragon Quest Monsters</a><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2175540/header.jpg" class="gift-img"><span class="gift-type">Jeu PC</span></li>
-        <li class="item"><a href="https://fr.anycubic.com/products/resine-uv-coloree" target="_blank">Résine Anycubic UV Grey HD</a><img src="https://fr.anycubic.com/cdn/shop/files/2d0585140e58d1d179115d8fd24d23af_6fe2dc2b-71aa-47c4-abbd-12c8dbc3ed04.png?v=1758191418&width=600" class="gift-img"><span class="gift-type">Impression 3D</span></li>
-        <li class="item"><span>Une bonne bouteille 🍾</span><img src="https://cdn.prod2.whisky.fr/media/lmdw/lmdw_large/67110_4_m.jpgde858538951aa20604932.webp" class="gift-img"><span class="gift-type">Alcool</span></li>
-        <li class="item"><a href="https://store.steampowered.com/app/2778580" target="_blank">Elden Ring DLC</a><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2778580/header.jpg" class="gift-img"><span class="gift-type">Extension PC</span></li>
-        <li class="item"><a href="https://www.hachette-collections.com/fr-fr/collection-warhammer-Combatpatrol/" target="_blank">Abonnement Hachette Warhammer 40k</a><img src="https://www.hachette-collections.com/medias/collections/fr-fr/17C/assets/images//homepage/z1_1.webp" class="gift-img"><span class="gift-type">Figurines !</span></li>
+
+
+        <li class="item">
+
+          <div class="gift-name">
+
+            Gilet Murray — Armand Thiery
+
+          </div>
+
+
+          <img
+            src="https://cdn.armandthiery.fr/products_images/prod_369/k_pull-torsade-murray-at-company-GRIS-CLAIR-front-53.jpg"
+            class="gift-img"
+            alt="Gilet Murray Armand Thiery"
+          >
+
+
+          <span class="gift-type">
+
+            Ce qui me ferait plaisir :
+
+            hauts, t-shirts, pulls,
+            gilets et autres vêtements.
+
+            <br><br>
+
+            <strong>
+              Taille haut : L
+            </strong>
+
+          </span>
+
+        </li>
+
+
       </ul>
+
     </section>
 
 
+
+    <!-- ======================================
+         MEUBLES
+         ====================================== -->
+
     <section class="section">
-      <h2>👕 Vêtements</h2>
-      <ul class="gift-list">
-        <li class="item"><span>Pour exemple: gillet murray - armand thierry </span><img src="https://cdn.armandthiery.fr/products_images/prod_369/k_pull-torsade-murray-at-company-GRIS-CLAIR-front-53.jpg" class="gift-img"><span class="gift-type">Ce qui me ferai plaisir des hauts t-shirt, pull, gilet et autres. Taille en haut L</span></li>
-      </ul>
+
+      <h2>
+        🛋️ Meubles
+      </h2>
+
+
+      <p class="section-intro">
+
+        Une idée un peu plus libre pour cette année.
+
+      </p>
+
+
+      <div class="furniture-note">
+
+        <strong>
+          Un bon d'achat IKEA
+        </strong>
+
+
+        <p>
+
+          Pour m'aider à acheter un fauteuil
+          ou éventuellement un canapé.
+
+          Je ne sais pas encore exactement
+          quel modèle choisir, donc le bon d'achat
+          me permettrait de choisir.
+
+        </p>
+
+
+        <a
+          class="ikea-link"
+          href="https://www.ikea.com/fr/fr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          🪑 IKEA
+
+        </a>
+
+      </div>
+
     </section>
 
 
-    <!-- 🗂️ RANGEMENT -->
-    <section class="section">
-      <h2>🗂️ Rangement pour peinture & pinceaux</h2>
-      <ul class="gift-list">
-        <li class="item"><a href="https://www.amazon.fr/dp/B0DL372G1D" target="_blank">Citadel Paint Storage</a><img src="https://m.media-amazon.com/images/I/81mU3xU01aL._AC_SL1500_.jpg" class="gift-img"><span class="gift-type">Organiseur GW</span></li>
-      </ul>
-    </section>  
 
-    <!-- TYRANIDES -->
-    <section class="section">
-      <h2>🪲 Figurines Tyranides quelques exemples</h2>
-      <ul class="gift-list">
-        <li class="item"><span></span><img src="https://www.warhammer.com/app/resources/catalog/product/threeSixty/99120106010_Carnifex360/01-01.jpg?fm=webp&w=920" class="gift-img"></li>
+    <!-- ======================================
+         ÉQUIPEMENT
+         ====================================== -->
 
-        <li class="item"><span></span><img src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120106065_Biovore1.jpg?fm=webp&w=920&h=948" class="gift-img"></li>
-      </ul>
+    <section class="section">
+
+      <h2>
+        🛠️ Équipement
+      </h2>
+
+
+      <p class="section-intro">
+
+        Quelques idées pratiques ou utiles
+        qui me feraient également plaisir.
+
+      </p>
+
+
+      <div class="equipment-grid">
+
+
+        <!-- ==================================
+             AEROX 9
+             ================================== -->
+
+        <article class="equipment-card">
+
+
+          <h3>
+
+            <a
+              href="https://steelseries.com/fr-fr/gaming-mice/aerox-9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              SteelSeries Aerox 9 Wireless
+
+            </a>
+
+          </h3>
+
+
+          <img
+            src="https://media.steelseriescdn.com/thumbs/catalog/items/62618/666a8680fbff440384dc74d49ed324b8.png.500x400_q100_crop-fit_optimize.png"
+            alt="SteelSeries Aerox 9 Wireless"
+          >
+
+
+
+
+
+          <a
+            class="equipment-link"
+            href="https://steelseries.com/fr-fr/gaming-mice/aerox-9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            SteelSeries Aerox 9
+
+          </a>
+
+
+        </article>
+
+
+
+        <!-- ==================================
+             AIRFRYER
+             ================================== -->
+
+        <article class="equipment-card">
+
+
+          <h3>
+            Un Airfryer
+          </h3>
+
+
+          <img
+            src="https://mobileimages.lowes.com/productimages/172aa18e-c338-422c-afd2-e419bbf65fd0/44435211.jpg?size=pdhism"
+            alt="Airfryer"
+          >
+
+
+
+
+          <span class="gift-type">
+
+            Photo générique — le modèle exact
+            reste à choisir.
+
+          </span>
+
+
+        </article>
+
+
+      </div>
+
     </section>
+
 
   </main>
-  <footer>🎄 Noël 2025 — Créé par Rémy 🦦</footer>
+
+
+
+  <!-- ======================================
+       FOOTER
+       ====================================== -->
+
+  <footer>
+
+    <strong>
+      🎄 Noël 2026 🎁
+    </strong>
+
+
+    <span>
+
+      Une liste de cadeaux préparée avec soin
+      — Créé par Rémy 🦦
+
+    </span>
+
+  </footer>
+
+
 </body>
+
 </html>
